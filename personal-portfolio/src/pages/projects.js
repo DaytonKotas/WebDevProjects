@@ -7,30 +7,36 @@ const Container = styled.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem;
+  background: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
 `
 
-const projects = [
-  {
-    title: "Project 1",
-    description: "Description of project 1",
-    link: "https://github.com/yourusername/project1",
-  },
-  {
-    title: "Project 2",
-    description: "Description of project 2",
-    link: "https://github.com/yourusername/project2",
-  },
-]
+const Projects = () => {
+  const projects = [
+    {
+      title: "Project 1",
+      description: "Description of project 1",
+      link: "https://github.com/yourusername/project1",
+    },
+    {
+      title: "Project 2",
+      description: "Description of project 2",
+      link: "https://github.com/yourusername/project2",
+    },
+  ]
 
-const Projects = () => (
-  <Layout>
-    <Container>
-      <h1>Projects</h1>
-      {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} />
-      ))}
-    </Container>
-  </Layout>
-)
+  return (
+    <Layout>
+      <Container>
+        <h1>Projects</h1>
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
+      </Container>
+    </Layout>
+  )
+}
 
 export default Projects

@@ -3,13 +3,13 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const Nav = styled.nav`
-  background: #333;
-  color: #fff;
+  background: var(--grey);
+  color: var(--white);
   padding: 1rem;
 `
 
 const NavLink = styled(Link)`
-  color: #fff;
+  color: var(--white);
   margin: 0 1rem;
   text-decoration: none;
 
