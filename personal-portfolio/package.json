@@ -19,7 +19,7 @@
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
-    "gatsby-cli": "^5.13.3",
+    "gatsby-cli": "^5.13.6",
     "prettier": "^2.8.8"
   },
   "keywords": [
@@ -27,14 +27,15 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
+  "prebuild": "npx gatsby telemetry --disable && npx gatsby clean",
+  "build": "gatsby build",
+  "develop": "gatsby develop",
+  "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+  "start": "gatsby develop",
+  "serve": "gatsby serve",
+  "clean": "gatsby clean",
+  "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+},
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
