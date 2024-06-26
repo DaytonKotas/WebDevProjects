@@ -4,18 +4,24 @@ import Footer from "./footer"
 import GlobalStyle from "../styles/globalStyles"
 import styled from "styled-components"
 
+const PageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`
+
 const Main = styled.main`
-  min-height: calc(100vh - 2.5rem); /* Adjusting for the footer height */
-  padding-bottom: 2.5rem; /* Adding bottom padding for footer space */
+  flex: 1;
+  padding-bottom: 2.5rem; /* Add padding to ensure footer doesn't overlap content */
 `
 
 const Layout = ({ children }) => (
-  <>
+  <PageContainer>
     <GlobalStyle />
     <Header />
     <Main>{children}</Main>
     <Footer />
-  </>
+  </PageContainer>
 )
 
 export default Layout
