@@ -1,5 +1,5 @@
 import React from "react"
-import Header from "./header"
+import Header from "./Header"
 import Footer from "./footer"
 import GlobalStyle from "../styles/globalStyles"
 import styled from "styled-components"
