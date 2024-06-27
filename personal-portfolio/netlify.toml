@@ -1,5 +1,5 @@
 [build]
-  command = "npm ci && npm run prebuild && npm run build"
+  command = "npm install && npm run prebuild && npm run build"
   publish = "public"
 
 [build.environment]
