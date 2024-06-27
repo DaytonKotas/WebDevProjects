@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run prebuild && npm run build"
+  command = "gatsby build"
   publish = "public"
 
 [build.environment]
