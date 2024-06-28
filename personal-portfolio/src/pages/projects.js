@@ -1,42 +1,31 @@
 import React from "react"
 import Layout from "../components/layout"
-import ProjectCard from "../components/ProjectCard"
-import styled from "styled-components"
 
-const Container = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  background: var(--white);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 2rem;
-`
+const projects = [
+  {
+    name: "YoFuel",
+    description:
+      "E-commerce website for buying Greek yogurt mixed with protein powder.",
+    link: "https://github.com/DaytonKotas/YoFuel",
+  },
+  
+]
 
-const Projects = () => {
-  const projects = [
-    {
-      title: "Project 1",
-      description: "Description of project 1",
-      link: "https://github.com/yourusername/project1",
-    },
-    {
-      title: "Project 2",
-      description: "Description of project 2",
-      link: "https://github.com/yourusername/project2",
-    },
-  ]
+const ProjectsPage = () => (
+  <Layout>
+    <h2>Projects</h2>
+    <ul>
+      {projects.map((project, index) => (
+        <li key={index}>
+          <h3>{project.name}</h3>
+          <p>{project.description}</p>
+          <a href={project.link} target="_blank" rel="noopener noreferrer">
+            View on GitHub
+          </a>
+        </li>
+      ))}
+    </ul>
+  </Layout>
+)
 
-  return (
-    <Layout>
-      <Container>
-        <h1>Projects</h1>
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
-        ))}
-      </Container>
-    </Layout>
-  )
-}
-
-export default Projects
+export default ProjectsPage
