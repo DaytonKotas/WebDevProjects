@@ -14,6 +14,18 @@ const projects = [
       "A blogging application focused on Frogs and Toads, with information about each species, their habitats, and their differences.",
     link: "https://github.com/DaytonKotas/FrogsToadsBlog",
   },
+  {
+    name: "GoodThings-FullStackApp",
+    description:
+      "Full-stack application that includes both frontend and backend components.",
+    link: "https://github.com/DaytonKotas/GoodThings-FullStackApp",
+  },
+  {
+    name: "GiannisBlog",
+    description:
+      "A blog website about one of my favorite basketball players using Contentful.",
+    link: "https://github.com/DaytonKotas/GiannisBlog",
+  },
 ]
 
 const ProjectsPage = () => (
