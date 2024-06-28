@@ -8,7 +8,12 @@ const projects = [
       "E-commerce website for buying Greek yogurt mixed with protein powder.",
     link: "https://github.com/DaytonKotas/YoFuel",
   },
-  
+  {
+    name: "Frogs and Toads Blog",
+    description:
+      "A blogging application focused on Frogs and Toads, with information about each species, their habitats, and their differences.",
+    link: "https://github.com/DaytonKotas/FrogsToadsBlog",
+  },
 ]
 
 const ProjectsPage = () => (
